@@ -1,0 +1,4 @@
+<div class="wj-listbox-item" *ngFor="let item of items;index as i;" [class.wj-state-selected]="item.active" (click)="onItem($event,item,i)">
+  <label *ngIf="!_checkbox" (click)="onItem($event,item,i)">{{item[displayMemberPath]}}</label>
+  <label *ngIf="_checkbox" (click)="onItem($event,item,i)"><input type="checkbox" (change)="onItem($event,item,i)" [checked]="item.active"> {{item[displayMemberPath]}}</label>
+</div>
