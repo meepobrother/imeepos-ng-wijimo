@@ -1,0 +1,15 @@
+<div style="position:relative" class="wj-template">
+  <div class="wj-input">
+    <div class="wj-input-group wj-input-btn-visible">
+      <input wj-part="input" type="text" class="wj-form-control" autocomplete="off" placeholder="country (selectable and editable)">
+      <span wj-part="btn" class="wj-input-group-btn" tabindex="-1" style="">
+        <button class="wj-btn wj-btn-default" (clic)="open()">
+          <span class="wj-glyph-down"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+  <div wj-part="dropdown" class="wj-content wj-dropdown-panel wj-control wj-listbox wj-content" [class.shown]="isOpen" style="" tabindex="0">
+    <div class="wj-listbox-item" [class.wj-state-selected]="item.active" *ngFor="let item of items;">{{item.title}}</div>
+  </div>
+</div>

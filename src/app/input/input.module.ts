@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListBoxModule } from './list-box/list-box.module';
+import {ComboBoxModule} from "./combo-box/combo-box.module";
 
 @NgModule({
   imports: [
     CommonModule,
-    ListBoxModule
+    ListBoxModule,
+    ComboBoxModule
   ],
   declarations: [],
   exports: [
-    ListBoxModule
+    ListBoxModule,
+    ComboBoxModule
   ]
 })
 export class InputModule { }
